@@ -1,0 +1,112 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: powderblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px; /* Increased border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+    margin-right: 10px;
+}
+
+.dropdown-button {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 12px; /* Match border radius */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px; /* Fixed width to accommodate arrow */
+}
+
+.dropdown-button .arrow {
+    transition: transform 0.3s ease;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Match border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    width: 200px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-button:hover, .dropdown-content a:hover {
+    background-color: lightpink;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    color:purple;
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Match border radius */
+}
+
+.search-button {
+    background-color: white;
+    color: purple ;
+    border: none;
+    padding: 10px;
+    border-radius: 12px; /* Match border radius */
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button i {
+    font-size: 16px;
+    color:purple;
+}
+
+.search-button:hover {
+    background-color: lightpink;
+}
+
+/* Show dropdown content */
+.dropdown-content.show {
+    display: block;
+}
+
+/* Rotate the arrow for open state */
+.dropdown-content.show ~ .dropdown-button .arrow {
+    transform: rotate(180deg);
+}
